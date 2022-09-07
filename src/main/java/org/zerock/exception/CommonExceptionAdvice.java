@@ -28,6 +28,7 @@ public class CommonExceptionAdvice {
 	@ExceptionHandler(NoHandlerFoundException.class)
 	@ResponseStatus(HttpStatus.NOT_FOUND)
 	public String handler404(NoHandlerFoundException ex) {
+//		404처리(mapping error)
 		return "custom404";
 	}
 

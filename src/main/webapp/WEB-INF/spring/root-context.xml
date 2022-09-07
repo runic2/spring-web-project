@@ -45,6 +45,9 @@
 	<!-- mybatis-spring mapper package 등록 -->
 	<mybatis-spring:scan
 		base-package="org.zerock.mapper" />
+		
+	<context:component-scan
+		base-package="org.zerock.service"></context:component-scan>
 
 	<!-- <bean id="transactionManager" -->
 	<!-- class="org.springframework.jdbc.datasource.DataSourceTransactionManager"> -->
