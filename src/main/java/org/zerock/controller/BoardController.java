@@ -27,6 +27,11 @@ public class BoardController {
 		model.addAttribute("list", service.getList());
 	}
 
+	@GetMapping("register")
+	public void register() {
+
+	}
+
 //	private void deleteFiles(List<BoardAttachVO> attachList) {
 //
 //		if (attachList == null || attachList.size() == 0) {
