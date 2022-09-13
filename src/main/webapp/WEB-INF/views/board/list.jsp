@@ -48,6 +48,7 @@
 					</c:forEach>
 				</table>
 				<!-- /.table table-striped table-bordered table-hover -->
+				
 				<!-- modal 추가 -->
 				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
 					aria-labelledby="myModalLabel" aria-hidden="true">
