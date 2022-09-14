@@ -35,7 +35,8 @@
 					<c:forEach var="board" items="${list }">
 						<tr>
 							<td><c:out value="${board.bno }" /></td>
-							<td><a class='move' href='<c:out value="${board.bno }"/>'>
+<!-- 							a target='_blank' => 새 창 열기 -->
+							<td><a class='move' href='/board/get?bno=<c:out value="${board.bno }"/>'>
 									<c:out value="${board.title }" />
 							</a> <%-- 							<b>[ <c:out value="${board.replyCnt}" /> ]</b>  --%>
 								<!-- target="_blank" 속성 -> 새창  --></td>
@@ -90,11 +91,11 @@
 				var result = '<c:out value="${result}"/>';//등록 후 처리된 bno
 				checkModal(result);
 
-				//history.replaceState({}, null, null);
+				history.replaceState({}, null, null);
 				//뒤로가기 했을 시, 뒤로가기전 html을 무시하여 modal창이 뜨지 않게 함.			
 
 				function checkModal(result) {//result => param('result')
-					if (result === '') {// || history.state
+					if (result === '' || history.state) {
 						return;
 					}
 					//result가 없거나, history.state(.replaceState(); 시, ture)가 ture면 모달 x
